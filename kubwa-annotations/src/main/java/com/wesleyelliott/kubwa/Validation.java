@@ -30,20 +30,24 @@ public class Validation<T> {
         this.message = message;
     }
 
-    public void validate(T value) {
+    public boolean validate(T value) {
         if (!rule.isValid(value)) {
             message = errorMessageId != -1 ? context.getString(errorMessageId) : "Error";
+            return false;
         } else {
             message = null;
+            return true;
         }
     }
 
-    public void validate(T value, T value2) {
+    public boolean validate(T value, T value2) {
         ConfirmRule confirmRule = (ConfirmRule) rule;
         if (!confirmRule.isValid(value, value2)) {
             message = errorMessageId != -1 ? context.getString(errorMessageId) : "Error";
+            return false;
         } else {
             message = null;
+            return true;
         }
     }
 

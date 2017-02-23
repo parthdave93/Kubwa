@@ -202,7 +202,6 @@ public class CodeGenerator {
                 builder.addStatement("if(!$L.validate($L)) return false;", fieldRule.getFieldName(), fieldRule.getValueName());
             }
         }
-        builder.addStatement("return true");
 
         return builder.build();
     }
