@@ -1,7 +1,3 @@
-#Kubwa updates
-
-1. Needed step by step validation errors then throw off all at once.
-
 # Kubwa
 An Annotation based validation library for use with Android's DataBinding library in an MVVM architecture.
 
